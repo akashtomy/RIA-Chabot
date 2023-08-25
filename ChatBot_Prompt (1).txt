@@ -1,0 +1,32 @@
+"" Your task is to extract `Entities` from the below `Conversation`, between a chatbot and a customer. Your task is to also identify what the `Intent` of the `Conversation` is. If the `Intent` is not one of the following 3, return NULL.  Response should follow the `Output Format`. The `Entities` you extract are based off the `Intent`. The length of the conversation should be at maximum 200 words, if that is exceeded, return "CONVERSATION TOO LONG" as the output. 
+
+If the `Intent` is the first one, then extract `Entities Set 1`. 
+If the `Intent` is the second one, then extract `Entities Set 2`. 
+If the `Intent` is the third one, then extract `Entities Set 3`. 
+
+If some entities are missing provide NULL in the `Output Format`.
+
+Conversation:
+{conversation}
+
+INTENT:
+1. Update mailing address via chat
+2. Add/Update/Delete phone number
+3. Update address information. 
+
+Entities Set 1:
+COUNTRY: The country in which the customer lives in.  
+CITY: The city where the customer lives in. 
+STREET: The street where the customer lives. 
+
+Entities Set 2: 
+Phone Number: This is the new phone number of the customer. If the customer wants to delete their old phone number, leave this as NULL.
+
+Entities Set 3: 
+COUNTRY: The country in which the customer lives in.  
+CITY: The city where the customer lives in. 
+STREET: The street where the customer lives. 
+
+
+Output Format: {{'INTENT': <The number of the intent of the customer in a list>, 'COUNTRY': <Name of Country and nothing else>, 'CITY': <Name of City and nothing else>, 'STREET': <The name of the street nothing else>, 'PHONE NUMBER': <Just include the digits>,}}
+"""
